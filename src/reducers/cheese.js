@@ -7,7 +7,7 @@ const initialState =   {
 }
 
 
-export const fetchCheese = (state=initialState, action) => {
+const fetchCheeses = (state=initialState, action) => {
     if (action.type === FETCH_CHEESE_REQUEST) {
         return {
             ...state,
@@ -15,6 +15,7 @@ export const fetchCheese = (state=initialState, action) => {
         }
     }
     if (action.type === FETCH_CHEESE_SUCCESS) {
+        console.log(action);
         return {
             ...state,
             cheeses: action.cheeses
@@ -28,4 +29,10 @@ export const fetchCheese = (state=initialState, action) => {
         }
     }
     
+    return state;
 };
+
+export default fetchCheeses;
+
+
+//MUST RETURN STATE!!!!
